@@ -20,6 +20,15 @@
 
 _@Keyframes_
 
+
+## Como utilizar variável no CSS
+
+- Podemos utilizar por exemplo para automatizar o processo de mudança de cores. Para isso, criamos a variável como no emxeplo abaixo:
+
+_:root{ --teste-cor: #000000; }_
+
+E depois podemos utilizar esse nome de variável para incluir no local onde estava a cor anteriormente.
+
 ### Links
 
 > [Link para Figma](https://www.figma.com/file/kljjtCWNtsTQRinLtZ4mn5/Calend%C3%A1rio-de-Jogos-(Community)?node-id=114%3A165)

@@ -11,14 +11,34 @@ body *{
 
 :root {
     --card-title-border-color: #746615;
-    --card-color-primary: #F7DD43;
+    --color-card-border: #F7DD43;
+    --color-bg: #1D1C19;
+    --bg: url(assets/bg-yellow.svg);
+}
+
+body.blue{
+    --card-title-border-color: #338Af3;
+    --color-card-border: #338Af3;
+    --color-bg: #202024;
+    --bg: url(assets/bg-blue.svg);
+
+}
+
+body.green{
+    --card-title-border-color: #047c3f;
+    --color-card-border: #047c3f;
+    --color-bg: #1A1F1B;
+    --bg: url(assets/bg-green.svg);
+
 }
 
 body {
     background-color: #121214;
-    background-image: url(./assets/bg.svg);
-    background-position-x: center;
-    background-position-y: 10%;
+    background-image: var(--bg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 ul {
@@ -34,6 +54,8 @@ ul {
 header {
     margin-bottom: 63px;
     text-align: center;
+
+    transition: transform 0.4s;
 }
 
 #cards {
@@ -43,15 +65,16 @@ header {
 }
 
 .card{
-    background-color: #1D1C19; 
+    background-color: var(--color-bg);
+    color: var(--color-card-border);
     border-radius: 6px;
-    border-bottom: 2px solid var(--card-color-primary);
+    border-bottom: 2px solid var(--color-card-border);
     padding: 32px 23px;
     text-align: center;
 }
 
 .card h2{
-    color: var(--card-color-primary);
+    color: #F7DD43;
     border: 1px solid var(--card-title-border-color);
     border-radius: 6px;
 
@@ -133,4 +156,9 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
 }
+}
+
+
+header:hover{
+    transform: scale(1.5);
 }

@@ -1,3 +1,28 @@
+function alterna_mode(){
+
+    let mode = document.getElementById("teste").classList
+    let el = document.getElementById("teste")
+
+
+    if(mode == "green") {
+        el.classList.remove(mode);
+        el.classList.add("blue"); 
+    } else if(mode == "blue") {
+        el.classList.remove(mode);
+        el.classList.add("yellow"); 
+    } else if(mode == "yellow") {
+        el.classList.remove(mode);
+        el.classList.add("green"); 
+    }
+}
+
+
+// el.classList.add("green");
+// if(mode == "green") {
+    
+//     el.classList.add("blue");
+// }
+
 function createGame(player1 , hour , player2 , ){
     return `
     <li>
@@ -8,7 +33,7 @@ function createGame(player1 , hour , player2 , ){
     `
 }
 
-let delay = -0.5;
+let delay = 0;
 
 function createCard(date , dayWeek , games) {
     
@@ -27,6 +52,29 @@ function createCard(date , dayWeek , games) {
 
 document.querySelector("#cards").innerHTML =
 
-    createCard("24/11", "quinta", createGame("brazil","16:00","serbia"))
-    + createCard("28/11", "segunda", createGame("brazil","13:00","switzerland"))
-    + createCard("02/12", "sexta", createGame("brazil","16:00","cameron"))
+    createCard("21/11", "quinta", 
+          createGame("brazil","16:00","serbia") 
+        + createGame("brazil","16:00","serbia") 
+        + createGame("brazil","16:00","serbia"))
+
+    + createCard("28/11", "segunda", 
+        createGame("brazil","13:00","switzerland")
+        + createGame("brazil","13:00","switzerland") 
+        + createGame("brazil","13:00","switzerland"))
+
+    + createCard("02/12", "sexta", 
+        createGame("brazil","16:00","cameron")
+        + createGame("brazil","16:00","cameron")
+        + createGame("brazil","16:00","cameron"))
+    
+    + createCard("02/12", "sabado", 
+        createGame("brazil","16:00","cameron")
+        + createGame("brazil","16:00","cameron")
+        + createGame("brazil","16:00","cameron"))
+
+if (document.getElementById("title").click()) {
+
+    let teste = document.getElementById("title")
+    alert(teste)
+
+}
